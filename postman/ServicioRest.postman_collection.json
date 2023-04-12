@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "6078dfdf-45fc-424d-b649-52e8af1abc3d",
+		"name": "ServicioRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/usuario/login?correo=abelcontrerasarteaga3@gmail.com&password=123456",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"login"
+					],
+					"query": [
+						{
+							"key": "correo",
+							"value": "abelcontrerasarteaga3@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrarCliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWJlbGNvbnRyZXJhc2FydGVhZ2EzQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE2ODEyNzYzNzIsImV4cCI6MTY4MTI3Njk3Mn0.7U53GyRVaA9a3rwy0dxY0IlG4W7Z54hmJNmI5k5O7iN_Q-sVY49sCbpmEEI2arwrFJYkWzewctSf6Jc8A0Vjlw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombres\":\"Pedro\",\r\n    \"direccion\":\"Trujillo\",\r\n    \"fechaNacimiento\":\"1999-05-03\",\r\n    \"dni\":\"56443456\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/Tbclientes/guardar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Tbclientes",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarCliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWJlbGNvbnRyZXJhc2FydGVhZ2EzQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE2ODEyNzYzNzIsImV4cCI6MTY4MTI3Njk3Mn0.7U53GyRVaA9a3rwy0dxY0IlG4W7Z54hmJNmI5k5O7iN_Q-sVY49sCbpmEEI2arwrFJYkWzewctSf6Jc8A0Vjlw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombres\":\"Pedro\",\r\n    \"direccion\":\"Trujillo\",\r\n    \"fechaNacimiento\":\"1999-05-03\",\r\n    \"dni\":\"56443456\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/Tbclientes/eliminar/16",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Tbclientes",
+						"eliminar",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarClientes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWJlbGNvbnRyZXJhc2FydGVhZ2EzQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE2ODEyNzYzNzIsImV4cCI6MTY4MTI3Njk3Mn0.7U53GyRVaA9a3rwy0dxY0IlG4W7Z54hmJNmI5k5O7iN_Q-sVY49sCbpmEEI2arwrFJYkWzewctSf6Jc8A0Vjlw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombres\":\"Pedro\",\r\n    \"direccion\":\"Trujillo\",\r\n    \"fechaNacimiento\":\"1999-05-03\",\r\n    \"dni\":\"56443456\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/Tbclientes/listar/1/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Tbclientes",
+						"listar",
+						"1",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

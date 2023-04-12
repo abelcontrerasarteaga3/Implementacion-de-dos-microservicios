@@ -1,0 +1,56 @@
+-- MySQL dump 10.13  Distrib 8.0.32, for Win64 (x86_64)
+--
+-- Host: localhost    Database: bdcrud
+-- ------------------------------------------------------
+-- Server version	8.0.32
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `tb_cliente`
+--
+
+DROP TABLE IF EXISTS `tb_cliente`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_cliente` (
+  `IDCLIENTE` int NOT NULL AUTO_INCREMENT,
+  `NOMBRES` varchar(100) NOT NULL,
+  `DIRECCION` varchar(100) DEFAULT NULL,
+  `FECHA_NACIMIENTO` date NOT NULL,
+  `FECHA_REGISTRO` datetime NOT NULL,
+  `DNI` varchar(8) NOT NULL,
+  PRIMARY KEY (`IDCLIENTE`),
+  UNIQUE KEY `tb_cliente` (`DNI`)
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_cliente`
+--
+
+LOCK TABLES `tb_cliente` WRITE;
+/*!40000 ALTER TABLE `tb_cliente` DISABLE KEYS */;
+INSERT INTO `tb_cliente` VALUES (1,'ABEL CONTRERAS ARTAREAG','CALLE LOS SAUCES 128','1992-05-03','2023-03-28 16:38:12','46957418'),(13,'Juan CONTRERAS ARTEAGA','Calle los Sauces 128.','2023-03-31','2023-03-28 16:43:50','45657676'),(14,'Ejemplos','Calle los Sauces 128.','2023-03-10','2023-03-28 16:44:41','22345678'),(15,'vdfdfdf','Av. Principal 459','2023-03-27','2023-03-27 20:03:34','44444444'),(17,'vdvfd','fvdfv','2023-03-28','2023-03-27 20:29:09','76676868'),(18,'fvfdvfd','vfvf','2023-03-21','2023-03-27 20:29:22','8975754'),(19,'cxvvf','fvfv','2023-03-15','2023-03-27 20:29:36','676576'),(75,'santos efrain contreras','poroto','2023-03-08','2023-03-28 21:46:20','98765432'),(77,'eeedd','dddd','2023-03-29','2023-03-28 21:50:33','67665768'),(81,'Rolando Vela','La Esperanza','2023-04-11','2023-04-11 23:39:35','34345410'),(82,'Cualquier nombre','Ejemplos','2023-04-11','2023-04-11 23:29:08','34345456'),(83,'Cualquier nombre','Ejemplos','2023-04-11','2023-04-11 23:32:42','34345450'),(84,'Pedro','Trujillo','1999-05-02','2023-04-12 00:17:39','56443456');
+/*!40000 ALTER TABLE `tb_cliente` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-04-12  0:43:46
